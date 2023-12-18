@@ -1,6 +1,7 @@
 package org.fasttrackit;
 
 
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class DemoWebsite {
 
@@ -20,6 +21,7 @@ public class DemoWebsite {
         String userName = "John Doe";
         Config.verifyNameEnteredSuccessfully(userName);
         System.out.println("The user should be able to enter their name in the FullName input field.");
+        sleep(4000);
         System.out.println("---------------------------------------------");
 
 
@@ -34,9 +36,11 @@ public class DemoWebsite {
         Config.enterUserEmail("john.doe@example.com");
         Config.verifyUserCanTypeEmail("john.doe@example.com");
         System.out.println("The user should be able to enter their email address in the Email input field.");
+        sleep(4000);
         System.out.println("--------------------------------------------------");
 
-        System.out.println("3. Test Case: User Can Enter Input in the CurrentAddress Input Field ");
+
+        System.out.println("3. User Can Enter Input in the CurrentAddress Input Field ");
         Config.openSite();
         Config.clickOnElementalsUrl();
         Config.clickOnTextBoxUrl();
@@ -49,15 +53,37 @@ public class DemoWebsite {
         Config.enterCurrentAddress("123 Main St");
         Config.verifyUserCanTypeCurrentAddress("123 Main St");
         System.out.println("The user should be able to enter their current address in the CurrentAddress input field");
+        sleep(4000);
         System.out.println("---------------------------------------------");
+
+
+        System.out.println("4. User can type input into PermanentAddress input field ");
+        Config.openSite();
+        Config.clickOnElementalsUrl();
+        Config.clickOnTextBoxUrl();
+        Config.clickOnPermanentAddressField();
+        Config.enterUserPermanentAddress("john.doe@example.com");
+        Config.verifyUserCanTypePermanentAddress("john.doe@example.com");
+        System.out.println("The user should be able to enter their permanent address in the PermanentAddress input field");
+        sleep(4000);
+        System.out.println("------------------------------------------------");
+
+
+        System.out.println("5. User can click on the Elements's submit button.");
+        Config.openSite();
+        Config.clickOnElementalsUrl();
+        Config.clickOnTextBoxUrl();
+        Config.clickOnSubmitButton();
+        System.out.println("The user should be able to click submit");
+        sleep(4000);
+        System.out.println("--------------------------------------------------");
+
     }
+
+
+
+
 }
-
-
-
-
-
-
 
 
 

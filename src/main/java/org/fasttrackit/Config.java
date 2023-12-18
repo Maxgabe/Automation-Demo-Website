@@ -93,7 +93,10 @@ public class Config {
     public static void clickOnSubmitButton() {
         ElementsPage.clickOnSubmitButton();
     }
-}
+
+
+    }
+
 
 
 

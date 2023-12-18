@@ -14,6 +14,7 @@ public class ElementsPage {
 
     public static void enterUserPermanentAddress(String address) {
 
+
     }
 
     public void clickOnTheElementsButton() {
